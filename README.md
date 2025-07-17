@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Synapsee
 
-## Getting Started
+> Vulgarisation du deep learning à travers une expérience immersive en 3D  
+> Educational site for demystifying deep learning through a 3D immersive experience
 
-First, run the development server:
+---
+
+## 📌 Présentation | Overview
+
+**Synapsee** est un projet en React + TypeScript visant à rendre le deep learning accessible au plus grand nombre.  
+Grâce à une animation 3D interactive inspirée d’un réseau de neurones, le site propose une expérience futuriste et pédagogique, idéale pour les curieux.
+
+**Synapsee** is a React + TypeScript project designed to make deep learning more accessible.  
+With an immersive 3D animation inspired by a neural network, the site offers a futuristic and educational experience, perfect for curious minds.
+
+---
+
+## 🔧 Technologies utilisées | Technologies Used
+
+### Frontend
+-  React
+-  TypeScript
+- Tailwind CSS
+- ⚡ Vite
+
+ ### Backend
+ - Node.JS (à venir)
+ - Express, pour les routes et requêtes https (à venir)
+ - MySQL 
+
+### Animation 3D
+- Three.js + vite (pour la compilation)
+- Custom neural network visual using particles, camera & rotation logic
+
+### Autres
+- Figma (pour les maquettes)
+- ☁AlwaysData (prévu pour l’hébergement)
+- Architecture modulaire & propre
+
+---
+
+
+Projet imaginé, codé et designé par @DearrLo.
+
+
+## 🚀 Lancer le projet | Run the Project
+
+### ⚙️ Installation
 
 ```bash
+git clone https://github.com/DearrLo/Synapsee-TypeScript-project.git
+cd Synapsee-TypeScript-project
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
