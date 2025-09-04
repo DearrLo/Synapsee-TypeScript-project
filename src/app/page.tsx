@@ -1,9 +1,12 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import IntroIframe from '@/components/IntroIframe'
 
 export default function Home() {
   return (
     <>
+    <IntroIframe />
+    
       <Navbar />
 
       <div className="flex flex-col min-h-screen bg-black text-white">
