@@ -10,24 +10,8 @@ export default function ExplorerPage() {
           <h1 className="text-4xl sm:text-6xl">Explorer, pas à pas</h1>
           <p className="mt-4 max-w-2xl text-lg sm:text-xl">Le Machine Learning, expliqué par étapes.</p>
 
-          <div className="mt-8 flex gap-4">
-            <a href="#start" className='group relative inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white transition-colors bg-indigo-600 hover:bg-indigo-500'>
-              Commencer ici
-            </a>
-
-            <a href="#start" className='group relative inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white transition-colors bg-indigo-600 hover:bg-indigo-500'>
-              Palier 1
-            </a>
-
-            <a href="#start" className='group relative inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white transition-colors bg-indigo-600 hover:bg-indigo-500'>
-              Palier 2
-            </a>
-
-            <a href="#start" className='group relative inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white transition-colors bg-indigo-600 hover:bg-indigo-500'>
-              Palier 3
-            </a>
-          </div>
-        </section>
+          <HeroSteps />
+        </section> {/* ← cette section devait être fermée */}
 
         {/* 3 blocs façon “Apprendre / Explorer / Appliquer”, 
         apprendre ça sera easy juste dla doc, explorer minis démos interactives maybe (?) et appliquer : exemples concrets (img, vidéos et anims 3D ?) */}
@@ -36,14 +20,17 @@ export default function ExplorerPage() {
             <Card
               title="Apprendre"
               desc="blablabla"
+              tag="learn"
             />
             <Card
               title="Explorer"
               desc="blablabla"
+              tag="explorer"
             />
             <Card
               title="Appliquer"
               desc="blablabla"
+              tag="apply"
             />
           </div>
         </section>
@@ -106,4 +93,78 @@ function Bullet({ children }: { children: React.ReactNode }) {
       <span>{children}</span>
     </li>
   )
+}
+
+function HeroSteps() {
+  return (
+    <div className="mt-8 flex flex-col items-center">
+      {/* Stepper cliquable */}
+      <nav aria-label="Paliers" className="flex items-center gap-4 sm:gap-8">
+        {/* Étape 1 */}
+        <div className="flex flex-col items-center">
+          {/* change plus tard vers #palier-1 si tu ajoutes la section */}
+          <a
+            href="#start"
+            aria-label="Étape 1 : Palier 1"
+            className="flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-zinc-700 text-zinc-300 hover:text-white hover:ring-zinc-500 transition"
+          >
+            <span className="text-base font-semibold">1</span>
+          </a>
+          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+            Palier 1
+          </a>
+        </div>
+
+        {/* Trait entre 1 et 2 */}
+        <div aria-hidden="true" className="h-px w-10 sm:w-16 bg-zinc-700/70" />
+
+        {/* Étape 2 */}
+        <div className="flex flex-col items-center">
+          {/* #palier 2 plus tard */}
+          <a
+            href="#start"
+            aria-label="Étape 2 : Palier 2"
+            className="flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-zinc-700 text-zinc-300 hover:text-white hover:ring-zinc-500 transition"
+          >
+            <span className="text-base font-semibold">2</span>
+          </a>
+          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+            Palier 2
+          </a>
+        </div>
+
+        {/* Trait entre 2 et 3 */}
+        <div aria-hidden="true" className="h-px w-10 sm:w-16 bg-zinc-700/70" />
+
+        {/* Étape 3 */}
+        <div className="flex flex-col items-center">
+          {/* #palier 3 plus tard */}
+          <a
+            href="#start"
+            aria-label="Étape 3 : Palier 3"
+            className="flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-zinc-700 text-zinc-300 hover:text-white hover:ring-zinc-500 transition"
+          >
+            <span className="text-base font-semibold">3</span>
+          </a>
+          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+            Palier 3
+          </a>
+        </div>
+      </nav>
+
+      {/* main CTA sous le stepper */}
+      <div className="relative mt-8">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 scale-110 rounded-full bg-gradient-to-r from-violet-600/30 via-indigo-600/20 to-transparent blur-3xl"
+        />
+        <a
+          href="#start"
+          className="inline-flex h-14 items-center justify-center rounded-full bg-violet-600 px-8 text-lg font-semibold text-white shadow-lg transition hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400/70 focus:ring-offset-2 focus:ring-offset-zinc-950"
+        >
+          Commencer ici
+        </a>
+      </div>
+    </div>
+  );
 }
