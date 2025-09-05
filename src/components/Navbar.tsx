@@ -38,8 +38,8 @@ export default function Navbar() {
             <span className="relative z-10">Accueil</span>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/articles" className="relative text-sm uppercase font-medium tracking-widest text-zinc-300 transition-colors duration-300 hover:text-white group">
-            <span className="relative z-10">Articles</span>
+          <Link href="/explorer" className="relative text-sm uppercase font-medium tracking-widest text-zinc-300 transition-colors duration-300 hover:text-white group">
+            <span className="relative z-10">Explorer</span>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link href="/about" className="relative text-sm uppercase font-medium tracking-widest text-zinc-300 transition-colors duration-300 hover:text-white group">
