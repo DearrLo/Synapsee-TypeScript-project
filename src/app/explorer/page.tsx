@@ -26,6 +26,7 @@ export default function ExplorerPage() {
             <Card title="Appliquer" desc="blablabla" tag="apply" />
           </div>
         </section>
+
         <section className="mx-auto max-w-5xl px-6 py-12">
           <div className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-6 sm:p-8">
             <p className="mb-2 text-sm uppercase tracking-widest text-indigo-400">
@@ -47,6 +48,7 @@ export default function ExplorerPage() {
             </ul>
           </div>
         </section>
+        
       </main>
       <Footer />
     </>
@@ -102,7 +104,7 @@ function HeroSteps() {
             href="#start"
             className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
           >
-            Palier 1
+            Bases
           </a>
         </div>
 
@@ -123,7 +125,7 @@ function HeroSteps() {
             href="#start"
             className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
           >
-            Palier 2
+            Pratique
           </a>
         </div>
 
@@ -144,7 +146,7 @@ function HeroSteps() {
             href="#start"
             className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
           >
-            Palier 3
+            Maîtrise
           </a>
         </div>
       </nav>
