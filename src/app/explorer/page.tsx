@@ -17,7 +17,7 @@ export default function ExplorerPage() {
           <HeroSteps />
         </section>
 
-        {/* 3 blocs façon “Apprendre / Explorer / Appliquer”, 
+        {/* 3 blocs façon “Apprendre / Explorer / Appliquer” 
         apprendre ça sera easy psq juste dla doc, explorer minis démos interactives maybe (?) et appliquer : exemples concrets (img, vidéos et anims 3D ?) */}
         <section id="start" className="mx-auto max-w-5xl px-6 pb-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -36,7 +36,7 @@ export default function ExplorerPage() {
               Je découvre le Machine Learning
             </h2>
             <p className="mt-3 max-w-3xl text-zinc-300">
-              Suis un parcours guidé en petits paliers. Chaque étape prend 2–3
+              Suis un parcours guidé en petits paliers. Chaque étape prend 2-3
               minutes, avec une analogie simple et un mini visuel.
             </p>
 
@@ -69,6 +69,22 @@ function Card({
       <p className="text-xs uppercase tracking-widest text-zinc-400">{tag}</p>
       <h3 className="mt-2 text-xl font-semibold text-white">{title}</h3>
       <p className="mt-2 text-zinc-300">{desc}</p>
+
+      {/* voir + part avec la petite anim */}
+      <a
+        href="#"
+        aria-label={`Voir plus sur ${title}`}
+        className="mt-4 inline-flex mx-auto w-fit items-center gap-1 text-xs font-semibold uppercase tracking-widest text-indigo-400 hover:text-white transition group"
+      >
+        <span className="relative">
+          Voir plus
+          <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-gradient-to-r from-indigo-400 via-violet-400 to-transparent transition-all duration-300 group-hover:w-full" />
+        </span>
+        <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </a>
+
       <span
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px w-full scale-x-0 bg-gradient-to-r from-transparent via-indigo-400/60 to-transparent transition-transform duration-300 group-hover:scale-x-100"
@@ -89,8 +105,9 @@ function Bullet({ children }: { children: React.ReactNode }) {
 function HeroSteps() {
   return (
     <div className="mt-8 p-8 flex flex-col items-center">
-      {/* Stepper cliquable (à improve psq pas assez impactant visuellement (?) ) */}
+      {/* Stepper cliquable (à improve psq pas assez impactant visuellement (?) + à link ) */}
       <nav aria-label="Paliers" className="flex items-center gap-4 sm:gap-8">
+
         {/* Étape 1 */}
         <div className="flex flex-col items-center">
           <a
@@ -113,7 +130,6 @@ function HeroSteps() {
 
         {/* Étape 2 */}
         <div className="flex flex-col items-center">
-          {/* #palier 2 plus tard */}
           <a
             href="#start"
             aria-label="Étape 2 : Palier 2"
@@ -134,7 +150,6 @@ function HeroSteps() {
 
         {/* Étape 3 */}
         <div className="flex flex-col items-center">
-          {/* #palier 3 plus tard */}
           <a
             href="#start"
             aria-label="Étape 3 : Palier 3"
