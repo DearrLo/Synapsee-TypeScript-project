@@ -21,9 +21,9 @@ export default function ExplorerPage() {
         apprendre ça sera easy psq juste dla doc, explorer minis démos interactives maybe (?) et appliquer : exemples concrets (img, vidéos et anims 3D ?) */}
         <section id="start" className="mx-auto max-w-5xl px-6 pb-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Card title="Apprendre" desc="blablabla" tag="learn" />
-            <Card title="Explorer" desc="blablabla" tag="explorer" />
-            <Card title="Appliquer" desc="blablabla" tag="apply" />
+            <Card title="Les données" desc="Les fondations. Chaque image, son ou chiffre est une petite pièce d'un immense puzzle. Sans données de qualité, aucun apprentissage n'est possible. Découvre pourquoi leur préparation est la clé." tag="ce qu'on observe :" />
+            <Card title="Les algorithmes" desc="Les méthodes. Ils ressemblent à des recettes qui testent, comparent et corrigent jusqu'à trouver le bon équilibre. Comprendre leur logique, c'est ouvrir la boîte noire du Machine Learning." tag="comment on apprend :" />
+            <Card title="Les modèles" desc="L'édifice. Une fois entraîné, le modèle devient capable de prédire, reconnaître et généraliser. C'est le résultat tangible de tout le processus, celui qu'on met entre les mains du monde réel" tag="ce qu'on sait faire, après :" />
           </div>
         </section>
 
