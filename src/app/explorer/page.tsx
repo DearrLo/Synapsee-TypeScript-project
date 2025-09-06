@@ -5,36 +5,27 @@ export default function ExplorerPage() {
   return (
     <>
       <Navbar />
-      <main className="text-white p-10 relative overflow-hidden">
+      <main className="text-white p-12 relative overflow-hidden">
         <section className="mx-auto max-w-5xl px-6 py-20">
-          <h1 className="text-4xl sm:text-6xl">Explorer, pas à pas</h1>
-          <p className="mt-4 max-w-2xl text-lg sm:text-xl">Le Machine Learning, expliqué par étapes.</p>
+          <h1 className="max-w-2xl text-4xl sm:text-6xl">
+            Explorer, pas à pas
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg sm:text-xl">
+            Le Machine Learning, expliqué par étapes.
+          </p>
 
           <HeroSteps />
-        </section> {/* ← cette section devait être fermée */}
-
-        {/* 3 blocs façon “Apprendre / Explorer / Appliquer”, 
-        apprendre ça sera easy juste dla doc, explorer minis démos interactives maybe (?) et appliquer : exemples concrets (img, vidéos et anims 3D ?) */}
-        <section id="start" className="mx-auto max-w-5xl px-6 pb-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Card
-              title="Apprendre"
-              desc="blablabla"
-              tag="learn"
-            />
-            <Card
-              title="Explorer"
-              desc="blablabla"
-              tag="explorer"
-            />
-            <Card
-              title="Appliquer"
-              desc="blablabla"
-              tag="apply"
-            />
-          </div>
         </section>
 
+        {/* 3 blocs façon “Apprendre / Explorer / Appliquer”, 
+        apprendre ça sera easy psq juste dla doc, explorer minis démos interactives maybe (?) et appliquer : exemples concrets (img, vidéos et anims 3D ?) */}
+        <section id="start" className="mx-auto max-w-5xl px-6 pb-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Card title="Apprendre" desc="blablabla" tag="learn" />
+            <Card title="Explorer" desc="blablabla" tag="explorer" />
+            <Card title="Appliquer" desc="blablabla" tag="apply" />
+          </div>
+        </section>
         <section className="mx-auto max-w-5xl px-6 py-12">
           <div className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-6 sm:p-8">
             <p className="mb-2 text-sm uppercase tracking-widest text-indigo-400">
@@ -44,8 +35,8 @@ export default function ExplorerPage() {
               Je découvre le Machine Learning
             </h2>
             <p className="mt-3 max-w-3xl text-zinc-300">
-              Suis un parcours guidé en petits paliers. Chaque étape prend
-              2–3 minutes, avec une analogie simple et un mini visuel.
+              Suis un parcours guidé en petits paliers. Chaque étape prend 2–3
+              minutes, avec une analogie simple et un mini visuel.
             </p>
 
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -73,9 +64,7 @@ function Card({
 }) {
   return (
     <div className="group relative rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-6 transition-colors hover:border-zinc-700/80">
-      <p className="text-xs uppercase tracking-widest text-zinc-400">
-        {tag}
-      </p>
+      <p className="text-xs uppercase tracking-widest text-zinc-400">{tag}</p>
       <h3 className="mt-2 text-xl font-semibold text-white">{title}</h3>
       <p className="mt-2 text-zinc-300">{desc}</p>
       <span
@@ -97,12 +86,11 @@ function Bullet({ children }: { children: React.ReactNode }) {
 
 function HeroSteps() {
   return (
-    <div className="mt-8 flex flex-col items-center">
-      {/* Stepper cliquable */}
+    <div className="mt-8 p-8 flex flex-col items-center">
+      {/* Stepper cliquable (à improve psq pas assez impactant visuellement (?) ) */}
       <nav aria-label="Paliers" className="flex items-center gap-4 sm:gap-8">
         {/* Étape 1 */}
         <div className="flex flex-col items-center">
-          {/* change plus tard vers #palier-1 si tu ajoutes la section */}
           <a
             href="#start"
             aria-label="Étape 1 : Palier 1"
@@ -110,7 +98,10 @@ function HeroSteps() {
           >
             <span className="text-base font-semibold">1</span>
           </a>
-          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+          <a
+            href="#start"
+            className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
+          >
             Palier 1
           </a>
         </div>
@@ -128,7 +119,10 @@ function HeroSteps() {
           >
             <span className="text-base font-semibold">2</span>
           </a>
-          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+          <a
+            href="#start"
+            className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
+          >
             Palier 2
           </a>
         </div>
@@ -146,25 +140,35 @@ function HeroSteps() {
           >
             <span className="text-base font-semibold">3</span>
           </a>
-          <a href="#start" className="mt-2 text-sm text-zinc-400 hover:text-zinc-200">
+          <a
+            href="#start"
+            className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
+          >
             Palier 3
           </a>
         </div>
       </nav>
 
       {/* main CTA sous le stepper */}
-      <div className="relative mt-8">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 scale-110 rounded-full bg-gradient-to-r from-violet-600/30 via-indigo-600/20 to-transparent blur-3xl"
+      <a
+        href="#start"
+        className="group relative inline-flex h-12 items-center justify-center rounded-full px-8
+             mt-10 text-xl font-semibold text-white
+             overflow-hidden border-2 border-white/90
+             ring-1 ring-violet-500/30
+             shadow-[0_8px_26px_rgba(124,58,237,0.25)]
+             transition-all duration-300 hover:-translate-y-0.5"
+      >
+        {/* Remplissage animé vertical */}
+        <span
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 z-0 h-0 bg-violet-600
+               transition-[height] duration-500 ease-out
+               group-hover:h-full group-active:duration-150"
         />
-        <a
-          href="#start"
-          className="inline-flex h-14 items-center justify-center rounded-full bg-violet-600 px-8 text-lg font-semibold text-white shadow-lg transition hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400/70 focus:ring-offset-2 focus:ring-offset-zinc-950"
-        >
-          Commencer ici
-        </a>
-      </div>
+        {/* txt du bouton */}
+        <span className="relative z-10">Commencer ici</span>
+      </a>
     </div>
-  );
+  )
 }
