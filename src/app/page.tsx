@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import IntroIframe from '@/components/IntroIframe'
-import Link from "next/link"
+import GradientButton from '@/components/GradientButton'
 
 export default function Home() {
   return (
@@ -20,12 +20,8 @@ export default function Home() {
               Un projet de vulgarisation tech pour les curieux, les scientos, et
               les rêveurs.
             </p>
-            <Link href="/explorer">
-              <button className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition-all duration-300 rounded-xl group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 shadow-lg shadow-blue-500/20 hover:shadow-indigo-500/30">
-                <span className="relative z-10">Explorer</span>
-                <div className="absolute inset-0 w-full h-full bg-white opacity-10 blur-sm transition-all duration-300 group-hover:opacity-20"></div>
-              </button>
-            </Link>
+
+            <GradientButton href="/explorer">Explorer</GradientButton>
           </div>
         </main>
         <Footer />
