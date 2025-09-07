@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +34,7 @@ export default function Navbar() {
           <span className="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-600 opacity-20 blur-xl animate-spin-slow group-hover:opacity-30"></span>
         </Link>
 
+        {/* Liens desktop */}
         <div className="space-x-8 hidden md:flex">
           <Link href="/" className="relative text-sm uppercase font-medium tracking-widest text-zinc-300 transition-colors duration-300 hover:text-white group">
             <span className="relative z-10">Accueil</span>
@@ -47,7 +49,27 @@ export default function Navbar() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
+
+        {/* Bouton hamburger mobile */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden flex flex-col space-y-1"
+          aria-label="Menu"
+        >
+          <span className={`h-0.5 w-6 bg-white transition ${open ? 'rotate-45 translate-y-1.5' : ''}`} />
+          <span className={`h-0.5 w-6 bg-white transition ${open ? 'opacity-0' : ''}`} />
+          <span className={`h-0.5 w-6 bg-white transition ${open ? '-rotate-45 -translate-y-1.5' : ''}`} />
+        </button>
       </div>
+
+      {/* Menu mobile */}
+      {open && (
+        <div className="md:hidden bg-zinc-900/90 backdrop-blur-sm px-6 pb-2 flex flex-col space-y-4">
+          <Link href="/" onClick={() => setOpen(false)} className="text-zinc-200 uppercase text-sm mt-2">Accueil</Link>
+          <Link href="/explorer" onClick={() => setOpen(false)} className="text-zinc-200 uppercase text-sm">Explorer</Link>
+          <Link href="/about" onClick={() => setOpen(false)} className="text-zinc-200 uppercase text-sm">À propos</Link>
+        </div>
+      )}
     </nav>
   )
 }
