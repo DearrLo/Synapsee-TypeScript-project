@@ -50,7 +50,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Bouton hamburger mobile */}
+      {/* !! MOBILE !! */}
+        {/* bouton hamburger mobile */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col space-y-1"
@@ -62,7 +63,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menu mobile */}
+      {/* inside du burger menu */}
       {open && (
         <div className="md:hidden bg-zinc-900/90 backdrop-blur-sm px-6 pb-2 flex flex-col space-y-4">
           <Link href="/" onClick={() => setOpen(false)} className="text-zinc-200 uppercase text-sm mt-2">Accueil</Link>
