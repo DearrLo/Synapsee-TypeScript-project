@@ -53,16 +53,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-6 py-2">
         <div className="max-w-6xl mx-auto rounded-2xl bg-zinc-900/70 border border-white/10 p-6">
-          <h2 className="text-2xl font-semibold text-white">RGPD</h2>
-          <p className="mt-4 text-zinc-300">
-            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
-            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
-            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
-            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
-            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
-          </p>
+
+          <h2 className="text-2xl font-semibold text-white"> RGPD — Protection des données</h2>
+          <div className="mt-4 text-zinc-300 space-y-4">
+            <p>
+              Ce site est consultable librement. Aucune donnée personnelle n'est
+              collectée ni transmise.
+            </p>
+            <p>
+              Des cookies de mesure d'audience peuvent être utilisés, uniquement après votre consentement.
+            </p>
+            <p>
+              Ce site utilise Matomo Analytics pour mesurer son audience et améliorer son contenu. L'outil est configuré de manière conforme
+              au RGPD : les adresses IP sont anonymisées, aucune donnée nominative n'est collectée, et aucun cookie de suivi n'est déposé sans votre consentement.
+            </p>
+            <p>
+              Les statistiques générées (pages visitées, temps passé, origine du trafic, appareil utilisé) sont uniquement utilisées à des fins internes et ne sont jamais transmises à des tiers.
+            </p>
+          </div>
         </div>
       </section>
 
