@@ -8,7 +8,6 @@ export default function AboutPage() {
       <Navbar />
 
       <section className="relative bg-zinc-950 text-white overflow-x-clip">
-        
         {/* trait violet */}
         <span
           aria-hidden
@@ -23,22 +22,18 @@ export default function AboutPage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg text-zinc-300">
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla.
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla.
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla.
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla
-              Blablablablabla Blablablablabla Blablablablabla.
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla.
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla.
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla.
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+              Blablablablabla Blablablablabla Blablablablabla Blablablablabla.
             </p>
           </div>
 
@@ -55,6 +50,19 @@ export default function AboutPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16">
+        <div className="max-w-6xl mx-auto rounded-2xl bg-zinc-900/70 border border-white/10 p-6">
+          <h2 className="text-2xl font-semibold text-white">RGPD</h2>
+          <p className="mt-4 text-zinc-300">
+            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+            Blablablablabla Blablablablabla Blablablablabla Blablablablabla
+          </p>
         </div>
       </section>
 
