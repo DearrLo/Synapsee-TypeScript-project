@@ -5,7 +5,7 @@ export default function ExplorerPage() {
   return (
     <>
       <Navbar />
-      <main className="text-white p-12 relative overflow-hidden">
+      <main className="text-white p-12 relative overflow-hidden bg-black">
         <section className="mx-auto max-w-5xl px-6 py-20">
           <h1 className="max-w-2xl text-4xl sm:text-6xl">
             Explorer, pas à pas
@@ -184,7 +184,7 @@ function HeroSteps() {
                group-hover:h-full group-active:duration-150"
         />
         {/* txt du bouton */}
-        <span className="relative z-10">Commencer ici</span>
+        <span className="relative z-10">Commencer</span>
       </a>
     </div>
   )
