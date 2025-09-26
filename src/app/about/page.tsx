@@ -14,7 +14,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute left-[max(2rem,9%)] top-28 h-[2px] w-[575px] bg-violet-500/60"
         />
 
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-5 px-6 py-25 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-5 py-25 lg:grid-cols-[1.1fr_0.9fr]">
           {/* texte de gauche */}
           <div>
             <h1 className="text-[clamp(36px,6vw,92px)] font-extrabold leading-none tracking-tight">

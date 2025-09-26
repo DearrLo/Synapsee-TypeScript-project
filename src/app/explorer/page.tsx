@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Link from "next/link";
 
 export default function ExplorerPage() {
   return (
@@ -110,13 +111,13 @@ function HeroSteps() {
 
         {/* Étape 1 */}
         <div className="flex flex-col items-center">
-          <a
-            href="#start"
+          <Link
+            href="/explorer/base1"
             aria-label="Étape 1 : Palier 1"
             className="flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-zinc-700 text-zinc-300 hover:text-white hover:ring-zinc-500 transition"
           >
             <span className="text-base font-semibold">1</span>
-          </a>
+          </Link>
           <a
             href="#start"
             className="mt-2 text-sm text-zinc-400 hover:text-zinc-200"
@@ -126,7 +127,7 @@ function HeroSteps() {
         </div>
 
         {/* Trait entre 1 et 2 */}
-        <div aria-hidden="true" className="h-px w-10 sm:w-16 bg-zinc-700/70" />
+        <div aria-hidden className="h-px w-10 sm:w-16 bg-zinc-700/70" />
 
         {/* Étape 2 */}
         <div className="flex flex-col items-center">
@@ -146,7 +147,7 @@ function HeroSteps() {
         </div>
 
         {/* Trait entre 2 et 3 */}
-        <div aria-hidden="true" className="h-px w-10 sm:w-16 bg-zinc-700/70" />
+        <div aria-hidden className="h-px w-10 sm:w-16 bg-zinc-700/70" />
 
         {/* Étape 3 */}
         <div className="flex flex-col items-center">
@@ -176,14 +177,12 @@ function HeroSteps() {
              shadow-[0_8px_26px_rgba(124,58,237,0.25)]
              transition-all duration-300 hover:-translate-y-0.5"
       >
-        {/* Remplissage animé vertical */}
         <span
           aria-hidden
           className="absolute inset-x-0 bottom-0 z-0 h-0 bg-violet-600
                transition-[height] duration-500 ease-out
                group-hover:h-full group-active:duration-150"
         />
-        {/* txt du bouton */}
         <span className="relative z-10">Commencer</span>
       </a>
     </div>
