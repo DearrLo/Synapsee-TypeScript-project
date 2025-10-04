@@ -8,14 +8,14 @@ export default function AboutPage() {
       <Navbar />
 
       <section className="relative bg-zinc-950 text-white overflow-x-clip">
-        {/* trait violet */}
+        {/* violet line */}
         <span
           aria-hidden
           className="pointer-events-none absolute left-[max(2rem,9%)] top-28 h-[2px] w-[575px] bg-violet-500/60"
         />
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-5 py-25 lg:grid-cols-[1.1fr_0.9fr]">
-          {/* texte de gauche */}
+          {/* left text */}
           <div>
             <h1 className="text-[clamp(36px,6vw,92px)] font-extrabold leading-none tracking-tight">
               À PROPOS.
@@ -42,7 +42,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* img (wrapper avec hauteur fixe + fill) */}
+          {/* img (wrapper with max height + fill) */}
           <div className="relative">
             <div className="relative h-[550px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-violet-500/20 mt-[30px] lg:ml-[40px]">
               <Image

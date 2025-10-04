@@ -1,9 +1,11 @@
 // use client = forcer le rendu côté client, import pour les hooks react
+// use client = force the render on the client side, import for react's hooks
 'use client'
 import { useEffect, useState } from 'react'
 
-// bloquer l'animation à juste une fois toutes les 30 mns. 
-// storage_key = nom de la clé dans le local storage, à modif quand mise en prod(?)
+// bloquer l'animation à juste une fois toutes les 30 mns.
+// block the animation all 30' minutes
+// storage_key = nom de la clé dans le local stotge, à modif quand mise en prod(?)
 const COOLDOWN_MS = 30 * 60 * 1000 // 30 minutes
 const STORAGE_KEY = 'synapsee:introSeenAt'
 

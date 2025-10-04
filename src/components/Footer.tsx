@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
     <footer className="relative w-full bg-black py-12 px-6 overflow-hidden border-t border-zinc-800 text-center">
-      {/* Texte visible */}
+      {/* visible Text */}
       <p className="relative z-10 text-sm text-zinc-500">
         Codé entre deux breakdowns et une overdose de Redbull par <span className="text-white font-semibold">Lorette Viel ❤️‍🩹</span>
       </p>
 
-      {/* SVG décoratif */}
+      {/* SVG for decoration */}
       <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
         <svg
           viewBox="0 0 2400 800"

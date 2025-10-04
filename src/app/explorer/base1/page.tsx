@@ -6,7 +6,6 @@ export default function Step1() {
     <>
       <Navbar />
       <main className="min-h-screen bg-black text-white">
-        {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 opacity-40 [background:radial-gradient(60rem_60rem_at_70%_-10%,#6b46c1_0%,transparent_60%),radial-gradient(40rem_40rem_at_10%_20%,#2563eb_0%,transparent_55%)]" />
           <div className="relative mx-auto max-w-6xl px-6 py-20">
@@ -42,7 +41,7 @@ export default function Step1() {
           </div>
         </section>
 
-        {/* 3 cartes : Quoi / Types / Pipeline */}
+        {/* 3 cards : what / types / pipeline */}
         <section className="mx-auto max-w-6xl px-6 pb-8">
           <div className="grid gap-6 md:grid-cols-3">
             <Card title="Qu’est-ce que c’est ?">

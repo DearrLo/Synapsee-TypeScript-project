@@ -25,5 +25,6 @@ export default function GradientButton({ children, href, onClick }: GradientButt
   )
 
   // si href fournit, alors transfo en btn cliquable
+  // if href is given then put a button whom can be ckliked
   return href ? <Link href={href}>{button}</Link> : button
 }
