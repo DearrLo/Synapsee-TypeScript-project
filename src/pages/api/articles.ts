@@ -7,3 +7,5 @@
 //   await connectToDatabase();
 //   return res.status(200).json({ message: 'MongoDB connectée via /pages/api ' });
 // }
+
+// à faire plus tard mais le système de DB est bien opérationnel

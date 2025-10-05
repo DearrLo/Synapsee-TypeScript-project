@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="relative w-full bg-black py-12 px-6 overflow-hidden border-t border-zinc-800 text-center">
       {/* visible Text */}
       <p className="relative z-10 text-sm text-zinc-500">
-        Codé entre deux breakdowns et une overdose de Redbull par <span className="text-white font-semibold">Lorette Viel ❤️‍🩹</span>
+        Coded with love by <span className="text-white font-semibold">Lorette Viel ❤️‍🩹</span>
       </p>
 
       {/* SVG for decoration */}

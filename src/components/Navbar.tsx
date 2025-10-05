@@ -35,6 +35,7 @@ export default function Navbar() {
         </Link>
 
         {/* Liens desktop */}
+        {/* desktop links */}
         <div className="space-x-8 hidden md:flex">
           <Link href="/" className="relative text-sm uppercase font-medium tracking-widest text-zinc-300 transition-colors duration-300 hover:text-white group">
             <span className="relative z-10">Accueil</span>
@@ -52,6 +53,7 @@ export default function Navbar() {
 
       {/* !! MOBILE !! */}
         {/* bouton hamburger mobile */}
+        {/* hambuger boutton for the mobile */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col space-y-1"
