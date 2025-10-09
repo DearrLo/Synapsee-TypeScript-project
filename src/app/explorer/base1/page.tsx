@@ -117,33 +117,50 @@ export default function Step1() {
           <h2 className="mb-6 text-2xl font-semibold">
             Mini-exemple : régression linéaire en 5 idées
           </h2>
+
+          {/* introduction pour mieux amener le concept de régression linéaire */}
+          <p className="mb-6 text-white/70 text-sm leading-relaxed">
+            La régression linéaire est l'un des{' '}
+            <strong>
+              modèles les plus simples et les plus importants du machine
+              learning
+            </strong>
+            . Elle sert à prédire une
+            <strong> valeur continue</strong> (comme un prix ou une taille) à
+            partir de caractéristiques connues. En clair, elle apprend le
+            meilleur chemin qui relie tes données à la réponse attendue.
+          </p>
+
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <ol className="list-decimal space-y-3 pl-5 text-white/85">
                 <li>
-                  <strong>Problème</strong> : prédire le prix d’un logement
-                  (label) à partir de sa surface et de sa localisation
-                  (features).
+                  <strong>Problème</strong> : prédire le prix d'un logement (donc valeur à estimer)
+                  à partir de ses caractéristiques connues, comme la surface ou la localisation
+                  (appelées <em>features</em>).
                 </li>
                 <li>
                   <strong>Modèle</strong> :{' '}
                   <code className="rounded bg-black/40 px-1">y = w·x + b</code>{' '}
-                  (une droite multidimensionnelle).
+                   Représente une relation linéaire entre les données d'entrée et le prix.
+                    (On cherche la droite ou le plan qui colle le mieux aux données).
                 </li>
                 <li>
-                  <strong>Loss</strong> : erreur quadratique moyenne (RMSE/
-                  MSE).
+                  <strong>Loss</strong>. On mesure l'écart entre les valeurs prédites et les valeurs réelles,
+                  via l'erreur quadratique moyenne (MSE ou Mean Squared Error,  qui sert à mesurer à quel point le modèle se trompe.)
                 </li>
                 <li>
-                  <strong>Apprentissage</strong> : ajuster <code>w</code> et{' '}
-                  <code>b</code> pour minimiser la loss (descente de gradient).
+                  <strong>Apprentissage</strong> via l'ajustement de <code>w</code> (les poids) et{' '}
+                  <code>b</code> (le biais) pour réduire l'erreur au maximum
+                   grâce à un algorithme appelé <em>descente de gradient</em>.
                 </li>
                 <li>
-                  <strong>Validation</strong> : vérifier la généralisation sur
-                  un set jamais vu (test).
+                  <strong>Validation</strong> tester le modèle sur des données jamais vues
+                  pour vérifier qu'il prédit bien en dehors de l'entraînement.
                 </li>
               </ol>
             </div>
+
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p className="mb-3 text-white/80">Pseudocode ultra-compact :</p>
               <pre className="overflow-x-auto rounded-lg bg-black/60 p-4 text-sm leading-6">
