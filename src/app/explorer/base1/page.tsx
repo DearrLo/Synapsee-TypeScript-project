@@ -91,28 +91,152 @@ export default function Step1() {
           </div>
         </section>
 
-        {/* Vocabulaire essentiel */}
+        {/* voc essentiel */}
         <section className="mx-auto max-w-6xl px-6 py-10">
           <h2 className="mb-4 text-2xl font-semibold">Mots-clés à connaître</h2>
           <div className="flex flex-wrap gap-3">
             {[
-              ['dataset', 'Lot de données'],
-              ['features', 'Variables explicatives'],
-              ['label', 'Cible à prédire'],
-              ['train / val / test', 'Découpage des données'],
-              ['overfitting', 'Surapprentissage'],
-              ['underfitting', 'Sous-apprentissage'],
-              ['baseline', 'Point de départ simple'],
-              ['metric', 'Moyen d’évaluer (MAE, RMSE, accuracy, F1…)'],
-              ['regularisation', 'Technique anti-overfitting'],
-              ['cross-validation', 'Validation croisée'],
-            ].map(([k, v]) => (
-              <Badge key={k} k={k} v={v} />
+              [
+                'dataset',
+                'Lot de données',
+                "Ensemble d'exemples utilisés pour entraîner, valider et tester un modèle.",
+              ],
+              [
+                'features',
+                'Variables explicatives',
+                'Attributs utilisés par le modèle pour faire ses prédictions.',
+              ],
+              [
+                'label',
+                'Cible à prédire',
+                'La valeur que le modèle doit apprendre à estimer (prix, catégorie, etc...)',
+              ],
+              [
+                'train / test',
+                'Découpage des données',
+                'Séparer les données pour entraîner, ajuster et évaluer un modèle.',
+              ],
+              [
+                'data cleaning',
+                'Nettoyage des données',
+                'Suppression ou correction des valeurs manquantes, doublons, incohérences...',
+              ],
+              [
+                'encoding',
+                'Encodage',
+                'Conversion des catégories textuelles en valeurs numériques exploitables.',
+              ],
+              [
+                'normalisation / standardisation',
+                "Mise à l'échelle",
+                "Ramener les valeurs sur des plages comparables pour stabiliser l'apprentissage.",
+              ],
+              [
+                'feature engineering',
+                'Création de variables',
+                'Construire de nouvelles features à partir des données brutes.',
+              ],
+              [
+                'data leakage',
+                "Fuite d'information",
+                "Quand des infos du test “contaminent” l'entraînement, faussant les résultats.",
+              ],
+              [
+                'bias / variance',
+                'Équilibre entre modèle trop rigide et trop flexible.',
+              ],
+              [
+                'underfitting',
+                'Sous-apprentissage',
+                'Modèle trop simple pour bien apprendre les relations.',
+              ],
+              [
+                'overfitting',
+                'Surapprentissage',
+                "Modèle trop adapté à l'entraînement, généralise mal.",
+              ],
+              [
+                'Régularisation',
+                "Pénalise la complexité du modèle pour éviter l'overfitting.",
+              ],
+              [
+                'baseline',
+                'Point de départ simple',
+                'Modèle de référence servant à comparer les performances.',
+              ],
+              [
+                'Descente de gradient',
+                "Méthode d'optimisation pour ajuster les poids du modèle.",
+              ],
+              [
+                'learning rate',
+                "Taux d'apprentissage",
+                'Vitesse à laquelle le modèle met à jour ses paramètres.',
+              ],
+              [
+                'loss function',
+                "Mesure de l'erreur entre prédiction et réalité.",
+              ],
+              [
+                'Métrique',
+                "Indicateur d'évaluation des performances.",
+              ],
+              [
+                'cross-validation',
+                'Validation croisée',
+                'Division répétée du dataset pour tester la robustesse du modèle.',
+              ],
+              [
+                'Résidus',
+                'Écart entre la valeur réelle et la valeur prédite.',
+              ],
+              [
+                'multicolinéarité',
+                'Corrélation des variables',
+                'Quand plusieurs features transmettent la même information.',
+              ],
+              [
+                'Biais des données',
+                "Tendance dans les données qui fausse l'apprentissage.",
+              ],
+              [
+                'drift',
+                'Dérive des données',
+                'Changement progressif dans les données au fil du temps.',
+              ],
+              [
+                'Reproductibilité',
+                'Capacité à obtenir les mêmes résultats avec le même code et dataset.',
+              ],
+              [
+                'Généralisation',
+                'Capacité du modèle à bien prédire sur des données inédites.',
+              ],
+              [
+                'Interprétabilité',
+                'Compréhension des raisons derrière les prédictions du modèle.',
+              ],
+              [
+                'Scalabilité',
+                "Aptitude du modèle à s'adapter à de gros volumes de données.",
+              ],
+              [
+                'pipeline',
+                'Chaîne de traitement',
+                "Suite d'étapes automatisées de préparation et d'entraînement.",
+              ],
+              [
+                'déploiement',
+                'Mise en production',
+                'Intégration du modèle dans une application réelle.',
+              ],
+            ].map(([k, v, info]) => (
+              <Badge key={k} k={k} v={v} info={info} />
             ))}
           </div>
         </section>
 
-        {/* Mini-exemple pédagogique */}
+        {/* Mini exemple pédagogique */}
         <section className="mx-auto max-w-6xl px-6 py-10">
           <h2 className="mb-6 text-2xl font-semibold">
             Mini-exemple : régression linéaire en 5 idées
@@ -135,28 +259,34 @@ export default function Step1() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <ol className="list-decimal space-y-3 pl-5 text-white/85">
                 <li>
-                  <strong>Problème</strong> : prédire le prix d'un logement (donc valeur à estimer)
-                  à partir de ses caractéristiques connues, comme la surface ou la localisation
-                  (appelées <em>features</em>).
+                  <strong>Problème</strong> : prédire le prix d'un logement
+                  (donc valeur à estimer) à partir de ses caractéristiques
+                  connues, comme la surface ou la localisation (appelées{' '}
+                  <em>features</em>).
                 </li>
                 <li>
                   <strong>Modèle</strong> :{' '}
                   <code className="rounded bg-black/40 px-1">y = w·x + b</code>{' '}
-                   Représente une relation linéaire entre les données d'entrée et le prix.
-                    (On cherche la droite ou le plan qui colle le mieux aux données).
+                  Représente une relation linéaire entre les données d'entrée et
+                  le prix. (On cherche la droite ou le plan qui colle le mieux
+                  aux données).
                 </li>
                 <li>
-                  <strong>Loss</strong>. On mesure l'écart entre les valeurs prédites et les valeurs réelles,
-                  via l'erreur quadratique moyenne (MSE ou Mean Squared Error,  qui sert à mesurer à quel point le modèle se trompe.)
+                  <strong>Loss</strong>. On mesure l'écart entre les valeurs
+                  prédites et les valeurs réelles, via l'erreur quadratique
+                  moyenne (MSE ou Mean Squared Error, qui sert à mesurer à quel
+                  point le modèle se trompe.)
                 </li>
                 <li>
-                  <strong>Apprentissage</strong> via l'ajustement de <code>w</code> (les poids) et{' '}
-                  <code>b</code> (le biais) pour réduire l'erreur au maximum
-                   grâce à un algorithme appelé <em>descente de gradient</em>.
+                  <strong>Apprentissage</strong> via l'ajustement de{' '}
+                  <code>w</code> (les poids) et <code>b</code> (le biais) pour
+                  réduire l'erreur au maximum grâce à un algorithme appelé{' '}
+                  <em>descente de gradient</em>.
                 </li>
                 <li>
-                  <strong>Validation</strong> tester le modèle sur des données jamais vues
-                  pour vérifier qu'il prédit bien en dehors de l'entraînement.
+                  <strong>Validation</strong> tester le modèle sur des données
+                  jamais vues pour vérifier qu'il prédit bien en dehors de
+                  l'entraînement.
                 </li>
               </ol>
             </div>
@@ -233,13 +363,23 @@ function Card({
   )
 }
 
-function Badge({ k, v }: { k: string; v: string }) {
+function Badge({ k, v, info }: { k: string; v: string; info?: string }) {
   return (
-    <div className="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+    <div
+      className="group relative flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 cursor-help"
+      title={info}
+    >
       <span className="text-sm font-medium">{k}</span>
       <span className="text-xs text-white/60 group-hover:text-white/80">
         — {v}
       </span>
+
+      {/* Tooltip custom en survol */}
+      {info && (
+        <div className="invisible absolute left-1/2 top-full z-10 w-64 -translate-x-1/2 translate-y-2 rounded-xl bg-black/80 p-3 text-xs text-white/80 opacity-0 transition group-hover:visible group-hover:opacity-100">
+          {info}
+        </div>
+      )}
     </div>
   )
 }
