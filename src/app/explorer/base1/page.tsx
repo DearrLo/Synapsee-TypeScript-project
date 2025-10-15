@@ -257,7 +257,7 @@ export default function Step1() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <ol className="list-decimal space-y-3 pl-5 text-white/85">
+              <ol className="list-decimal space-y-10 pl-5 text-white/85">
                 <li>
                   <strong>Problème</strong> : prédire le prix d'un logement
                   (donc valeur à estimer) à partir de ses caractéristiques
@@ -294,20 +294,28 @@ export default function Step1() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p className="mb-3 text-white/80">Pseudocode ultra-compact :</p>
               <pre className="overflow-x-auto rounded-lg bg-black/60 p-4 text-sm leading-6">
-                {`# Split: 70% train, 15% val, 15% test
-init w, b
-repeat until convergence:
-  y_pred = w*x + b
-  loss = MSE(y_true, y_pred)
-  w = w - lr * dloss/dw
-  b = b - lr * dloss/db
-# Choisir les hyperparamètres (lr, regularisation) sur le set val
-# Reporter la métrique finale sur le set test`}
+                {` 1. Préparer les données
+Charger les données (fichier.csv), nettoyer les valeurs manquantes, 
+les découper en entraînement, validation et test (-> 0.7, 0.15, 0.15).
+
+2. Définir le modèle 
+y_pred = w * x + b
+(w = poids, b = biais et y_pred soit proche que possible de la vraie valeur y)
+
+3. Mesurer l'erreur
+Erreur (ou “loss”) = moyenne( (y_pred - y)^2 )
+
+4. Apprendre/Répéter
+    * prédire avec w et b
+    * calculer l'erreur
+    * ajuster w et b pour réduire cette erreur
+( → descente de gradient)
+
+5. Vérifier
+Tester le modèle sur des données jamais vues, comparer ses 
+prédictions à la réalité. Si erreur faible → modèle bien entraîné.
+Sinon → revoir données, paramètres ou modèle.`}
               </pre>
-              <p className="mt-3 text-sm text-white/60">
-                Astuces : normaliser les features, commencer par une{' '}
-                <em>baseline</em> (médiane, moyenne), tracer les résidus.
-              </p>
             </div>
           </div>
         </section>
@@ -322,7 +330,7 @@ repeat until convergence:
               'Commencer simple (baseline) avant un modèle sophistiqué.',
               'Toujours séparer entraînement, validation et test.',
               'Une bonne métrique vaut mille impressions visuelles.',
-              'L’overfitting se combat par données, régularisation et validation.',
+              'L\'overfitting se combat par données, régularisation et validation.',
               'Documenter ses hypothèses et décisions.',
               'Itérer par petites expériences, mesurer, décider.',
             ].map(t => (
