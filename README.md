@@ -1,5 +1,5 @@
 # Synapsee
-#### Video Demo: (https://youtu.be/YmG2PKr43oM)
+#### Video Demo: (ask me directly)
 
 #### Description:
 Synapsee is my final project for CS50x.  
